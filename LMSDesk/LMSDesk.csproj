@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F3EDA318-D76B-492E-BE8A-3291A1174548}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LMSDesk</RootNamespace>
+    <AssemblyName>LMSDesk</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Screenshot 2026-02-14 194523.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.7.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.7.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCourse.Designer.cs">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppSession.cs" />
+    <Compile Include="InstituteCertificateEngine.cs" />
+    <Compile Include="InstitutePrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstitutePrintForm.Designer.cs">
+      <DependentUpon>InstitutePrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reg_InstituteMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reg_InstituteMain.Designer.cs">
+      <DependentUpon>Reg_InstituteMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentProfile.Designer.cs">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CertificateEngine.cs" />
+    <Compile Include="CertificateInfo.cs" />
+    <Compile Include="CertificateProcessor.cs" />
+    <Compile Include="Certificationform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Certificationform.Designer.cs">
+      <DependentUpon>Certificationform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CertificationLIst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CertificationLIst.Designer.cs">
+      <DependentUpon>CertificationLIst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CourseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CourseList.Designer.cs">
+      <DependentUpon>CourseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashbordForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashbordForm1.Designer.cs">
+      <DependentUpon>DashbordForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinalMarklistPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalMarklistPrint.Designer.cs">
+      <DependentUpon>FinalMarklistPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenCertificationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenCertificationList.Designer.cs">
+      <DependentUpon>GenCertificationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GenMarkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GenMarkList.Designer.cs">
+      <DependentUpon>GenMarkList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiveCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LiveCourses.Designer.cs">
+      <DependentUpon>LiveCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkListEngine.cs" />
+    <Compile Include="marklistprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="marklistprint.Designer.cs">
+      <DependentUpon>marklistprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MarkSheetData.cs" />
+    <Compile Include="MasterpageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterpageForm.Designer.cs">
+      <DependentUpon>MasterpageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faculty Form.Designer.cs">
+      <DependentUpon>Faculty Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FacultyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FacultyList.Designer.cs">
+      <DependentUpon>FacultyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Feedback Form.Designer.cs">
+      <DependentUpon>Feedback Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Institute Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Institute Registration.Designer.cs">
+      <DependentUpon>Institute Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstituteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstituteList.Designer.cs">
+      <DependentUpon>InstituteList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PageOverlayHelper.cs" />
+    <Compile Include="printcertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="printcertificate.Designer.cs">
+      <DependentUpon>printcertificate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="requested.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="requested.Designer.cs">
+      <DependentUpon>requested.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchStudents.designer.cs">
+      <DependentUpon>SearchStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStudents.Designer.cs">
+      <DependentUpon>AddStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentLIst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentLIst.Designer.cs">
+      <DependentUpon>StudentLIst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuccessPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessPopup.Designer.cs">
+      <DependentUpon>SuccessPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToastControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToastControl.Designer.cs">
+      <DependentUpon>ToastControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAddForm.Designer.cs">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ValidationPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ValidationPopup.Designer.cs">
+      <DependentUpon>ValidationPopup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCourse.resx">
+      <DependentUpon>AddCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstitutePrintForm.resx">
+      <DependentUpon>InstitutePrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reg_InstituteMain.resx">
+      <DependentUpon>Reg_InstituteMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentProfile.resx">
+      <DependentUpon>StudentProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Certificationform.resx">
+      <DependentUpon>Certificationform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CertificationLIst.resx">
+      <DependentUpon>CertificationLIst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CourseList.resx">
+      <DependentUpon>CourseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashbordForm1.resx">
+      <DependentUpon>DashbordForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalMarklistPrint.resx">
+      <DependentUpon>FinalMarklistPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenCertificationList.resx">
+      <DependentUpon>GenCertificationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenMarkList.resx">
+      <DependentUpon>GenMarkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LiveCourses.resx">
+      <DependentUpon>LiveCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="marklistprint.resx">
+      <DependentUpon>marklistprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterpageForm.resx">
+      <DependentUpon>MasterpageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faculty Form.resx">
+      <DependentUpon>Faculty Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FacultyList.resx">
+      <DependentUpon>FacultyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Feedback Form.resx">
+      <DependentUpon>Feedback Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Institute Registration.resx">
+      <DependentUpon>Institute Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstituteList.resx">
+      <DependentUpon>InstituteList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="printcertificate.resx">
+      <DependentUpon>printcertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="requested.resx">
+      <DependentUpon>requested.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SearchStudents.resx">
+      <DependentUpon>SearchStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStudents.resx">
+      <DependentUpon>AddStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentLIst.resx">
+      <DependentUpon>StudentLIst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuccessPopup.resx">
+      <DependentUpon>SuccessPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToastControl.resx">
+      <DependentUpon>ToastControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAddForm.resx">
+      <DependentUpon>UserAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ValidationPopup.resx">
+      <DependentUpon>ValidationPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2026-02-14 194523.jpg" />
+    <None Include="Resources\search_for_employee_20260215060034.gif" />
+    <None Include="Resources\search.gif" />
+    <Content Include="Screenshot 2026-02-14 194523.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
