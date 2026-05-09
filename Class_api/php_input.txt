@@ -1,0 +1,1 @@
+{"teacher_name":"kavita","gender":"Female","contact":"9798797987","email":"k@gmail.com","address":"miraj","marital_status":"Married","qualification":"BSC","classes_can_teach":"10th","preferable_teaching_area":"computer","subjects_can_teach":"computer","experience_years":3,"find_about_us":"na","date_of_joining":"2025-10-22"}

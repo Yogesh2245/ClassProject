@@ -1,0 +1,1 @@
+{"course_name":"JAVA","course_code":"1","instructor_name":"ADMIN","course_duration":"3 Months","start_date":"2026-02-02","end_date":"2026-02-02","course_category":"Web Development (HTML, CSS, JavaScript, PHP, MySQL, Frameworks (Bootstrap, React)","course_level":"Beginner","course_fee":3000,"course_mode":"Offline","course_description":"NO"}

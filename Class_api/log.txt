@@ -1,0 +1,4 @@
+[2026-01-25 08:05:52] POST: [] | RAW: 
+[2026-01-25 08:07:39] POST: {"id":"5"} | RAW: id=5
+[2026-01-25 08:10:13] POST: {"id":"3"} | RAW: id=3
+[2026-01-25 08:14:01] ERROR: Database connection failed: Variable $conn not found
